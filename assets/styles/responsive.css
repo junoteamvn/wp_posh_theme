@@ -134,6 +134,15 @@
     padding: 0 15px; }
     #service .service-post .post-img .img-cover {
       width: 100%; }
+  #gallery .gallery-content {
+    width: 88%; }
+  #gallery .owl-nav .owl-next {
+    left: auto;
+    margin-left: auto;
+    right: 15px; }
+  #gallery .owl-nav .owl-prev {
+    left: 15px;
+    margin-left: auto; }
   #blog .grid .grid-sizer {
     width: 50%; }
   #blog .grid .grid-item {

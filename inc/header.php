@@ -11,6 +11,25 @@ $wp_customize->add_panel( 'header_theme', array(
 $wp_customize->get_section('title_tagline')->panel= 'header_theme';
 $wp_customize->get_section('title_tagline')->priority= 1;
 
+/* Color Picker */
+$wp_customize->add_setting(
+    'header_color',
+        array(
+            'default' => '#d6a862',
+        )
+);
+$wp_customize->add_control(
+    new WP_Customize_Color_Control(
+        $wp_customize,
+        'header_color',
+        array(
+            'label' => 'Primary Color',
+            'section' => 'title_tagline',
+            'settings' => 'header_color',
+        )
+    )
+);
+
 /* Logo Header Image */
 $wp_customize->add_setting( 
     'header_logo',

@@ -92,7 +92,16 @@ class services_widget extends WP_Widget {
                 <div class="post-content col-md-5">
                     <h4 class="post-heading">'.$title.'</h4>
                     <p class="post-text">'.$content.'</p>
-                    <a class="post-link" href="'.$url.'" target="_blank">Learn more</a>
+                    <a class="post-link" href="'.$url.'" target="_blank">Learn more
+                    <svg class="cls-arrow" xmlns="http://www.w3.org/2000/svg" width="32.06" height="9.94" viewBox="0 0 32.06 9.94">
+                      <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                          <rdf:Description rdf:about=""/>
+                       </rdf:RDF>
+                    </x:xmpmeta><?xpacket end="w"?></metadata>
+                      <path class="cls-1" d="M1081.77,1635.72l-5.13-4.96v3.99h-26.91v1.95h26.91v3.99Z" transform="translate(-1049.72 -1630.75)"/>
+                    </svg></a>
                 </div>';
         echo $after_widget;
 	} 

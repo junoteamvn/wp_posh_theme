@@ -42,7 +42,7 @@
         </nav>
         <a class="back-top" href="#header">Go to top
             <svg xmlns="http://www.w3.org/2000/svg" width="5" height="17" viewBox="0 0 5 17">
-                <path class="cls-1" d="M1397.5,5506l-2.51,2.72h2.02v14.29h0.98v-14.29H1400Z" transform="translate(-1395 -5506)"/>
+                <path  d="M1397.5,5506l-2.51,2.72h2.02v14.29h0.98v-14.29H1400Z" transform="translate(-1395 -5506)"/>
             </svg>
         </a>
     </div>

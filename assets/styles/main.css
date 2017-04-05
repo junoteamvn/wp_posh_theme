@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @font-face {
   font-family: 'fontello';
   src: url("../fonts/fontello.eot?23212359");
@@ -190,16 +190,20 @@ h1, h2, h3, h4, h5, h6, p, span, li {
     .navigation .bot-nav .logo {
       float: left;
       padding-top: 31px; }
-      .navigation .bot-nav .logo img {
+      .navigation .bot-nav .logo > * {
         height: 48px;
-        margin: auto; }
+        margin: auto; 
+        display: block; }
     .navigation .bot-nav .nav-menu {
       float: right; }
       .navigation .bot-nav .nav-menu .logo {
         display: none; }
-        .navigation .bot-nav .nav-menu .logo img {
+        .navigation .bot-nav .nav-menu .logo > * {
           height: 32px;
-          margin: auto; }
+          margin: auto;
+          display: block; }
+          .navigation .bot-nav .nav-menu .logo > * * {
+            fill: #3a3a3a; }
     .navigation .bot-nav .nav-primary li {
       margin: 0 32px 0 0; }
       .navigation .bot-nav .nav-primary li:last-child {
@@ -345,9 +349,11 @@ h1, h2, h3, h4, h5, h6, p, span, li {
       #service .service-category li.active a {
         background-color: transparent; }
     #service .service-category a {
-      padding: 50px 10px 30px; }
-    #service .service-category img {
-      margin: 0 auto 33px; }
+      padding: 40px 0; display:block; }
+    #service .service-category img, #service .service-category svg {
+      margin: 0 auto 33px; 
+      height: 40px; 
+      display:block; }
     #service .service-category span {
       font-family: "Butler Medium", Helvetica, Arial;
       color: #4c4c4c;
@@ -427,10 +433,6 @@ h1, h2, h3, h4, h5, h6, p, span, li {
         color: #d6a862;
         padding-bottom: 5px;
         position: relative; }
-        #service .service-post .post-content .post-link:before {
-          position: absolute;
-          content: url(../images/arrow.svg);
-          right: -52px; }
 
 #gallery {
   float: left;
@@ -497,17 +499,15 @@ h1, h2, h3, h4, h5, h6, p, span, li {
     #gallery .owl-nav .owl-prev svg {
       transform: rotate(180deg);
       fill: #fff; }
-    #gallery .owl-nav .owl-prev:hover svg {
-      fill: #d6a862; }
+    #gallery .owl-nav .owl-prev svg * {
+      fill: #fff; }
   #gallery .owl-nav .owl-next {
     position: absolute;
     bottom: 120px;
     left: 50%;
     margin-left: 545px; }
-    #gallery .owl-nav .owl-next svg {
+    #gallery .owl-nav .owl-next svg *{
       fill: #fff; }
-    #gallery .owl-nav .owl-next:hover svg {
-      fill: #d6a862; }
 
 #channel {
   text-align: center;
@@ -609,10 +609,10 @@ h1, h2, h3, h4, h5, h6, p, span, li {
       #blog .grid .grid-item:hover .item-bg {
         right: -10px;
         top: 10px;
-        transition: 0.5s; }
+        transition: 0.5s;
+        background-color: #d6a862; }
       #blog .grid .grid-item .item-bg {
         position: absolute;
-        background-color: #d6a862;
         width: 100%;
         height: 300px;
         right: 0;
@@ -727,7 +727,7 @@ h1, h2, h3, h4, h5, h6, p, span, li {
   #footer .footer-logo {
     display: inline-block;
     margin-bottom: 8px; }
-    #footer .footer-logo img {
+    #footer .footer-logo > * {
       height: 65px; }
   #footer .footer-socials {
     text-align: center; }

@@ -23,6 +23,7 @@
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri().'/assets/images/favicon.png'?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
+    <?php get_template_part( 'theme', 'style' ); ?>
 </head>
 <body data-spy="scroll" data-target=".menu-wrap" <?php body_class(); ?>>
 <div class="navigation">

@@ -70,7 +70,7 @@
           });
       }
 
-      if ($(window).width() < 768) {
+      if ($(window).width() <= 768) {
         $('.blog-category').find('li.active').find('button').css('color','#3a3a3a');
         $('.blog-category').on('click', 'li', function() {
           var index = $('.blog-category').find('li').index(this);
@@ -245,7 +245,7 @@
 
       
       //== MODAL HEADER, CHANNEL==//
-      $('.img-video').on('click', function() {
+      $('.icon-play').on('click', function() {
         var url, url_id;
         url = $(this).attr('href');
         console.log(url);
@@ -298,6 +298,34 @@
           else{
             status.css('height', '0px');
           }
+      });
+
+
+      /**
+       * @see Replace all SVG images with inline SVG
+       * @link https://gist.github.com/Bloggerschmidt/61beeca2cce94a70c9df
+       */
+      $('img').filter(function() { return this.src.match(/.*\.svg$/); }).each(function(){   
+          var $img = $(this),
+              imgID = $img.attr('id'),
+              imgClass = $img.attr('class'),
+              imgURL = $img.attr('src');
+          $.get(imgURL, function(data) {
+              // Get the SVG tag, ignore the rest
+              var $svg = $(data).find('svg');
+              // Add replaced image's ID to the new SVG
+              if(typeof imgID !== 'undefined') {
+                  $svg = $svg.attr('id', imgID);
+              }
+              // Add replaced image's classes to the new SVG
+              if(typeof imgClass !== 'undefined') {
+                  $svg = $svg.attr('class', imgClass+' replaced-svg');
+              }
+              // Remove any invalid XML tags as per http://validator.w3.org
+              $svg = $svg.removeAttr('xmlns:a');
+              // Replace image with new SVG
+              $img.replaceWith($svg);
+          }, 'xml');
       });
      
 
